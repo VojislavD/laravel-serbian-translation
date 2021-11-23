@@ -1,0 +1,50 @@
+{
+    "name": "vojislavd/laravel-serbian-translation",
+    "description": "Translation of Laravel framework to Serbian language",
+    "keywords": [
+        "vojislavd",
+        "laravel",
+        "laravel-serbian-translation"
+    ],
+    "homepage": "https://github.com/vojislavd/laravel-serbian-translation",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Vojislav Dragicevic",
+            "email": "vojislavdragicevic17@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^8.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^6.23",
+        "phpunit/phpunit": "^9.5.10"
+    },
+    "autoload": {
+        "psr-4": {
+            "VojislavD\\LaravelSerbianTranslation\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "VojislavD\\LaravelSerbianTranslation\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "VojislavD\\LaravelSerbianTranslation\\LaravelSerbianTranslationServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
