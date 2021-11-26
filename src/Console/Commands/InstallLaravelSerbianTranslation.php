@@ -38,18 +38,49 @@ class InstallLaravelSerbianTranslation extends Command
      */
     public function handle()
     {
-        if (! $this->translationFilesExists()) {
-            $this->publishTranslationFiles();
-            $this->info('Localization files published.');
-        } else {
-            if ($this->shouldOverwriteTranslationFiles()) {
-                $this->info('Overwritting localization files...');
-                $this->publishTranslationFiles(true);
+        $writingSystem = $this->chooseWritingSystem();
+        
+        if ($writingSystem === 'Latin') {
+            if (! $this->translationFilesExists()) {
+                $this->publishTranslationFilesLatin();
                 $this->info('Localization files published.');
             } else {
-                $this->info('Existing localization files not overwritten.');
+                if ($this->shouldOverwriteTranslationFiles()) {
+                    $this->info('Overwritting localization files...');
+                    $this->publishTranslationFilesLatin(true);
+                    $this->info('Localization files published.');
+                } else {
+                    $this->info('Existing localization files not overwritten.');
+                }
+            }
+        } else if ($writingSystem === 'Cyrillic') {
+            if (! $this->translationFilesExists()) {
+                $this->publishTranslationFilesCyrillic();
+                $this->info('Localization files published.');
+            } else {
+                if ($this->shouldOverwriteTranslationFiles()) {
+                    $this->info('Overwritting localization files...');
+                    $this->publishTranslationFilesCyrillic(true);
+                    $this->info('Localization files published.');
+                } else {
+                    $this->info('Existing localization files not overwritten.');
+                }
             }
         }
+    }
+
+    /**
+     * Choose writing system between Latin and Cyrillic
+     * 
+     * @return int
+     */
+    public function chooseWritingSystem()
+    {
+        return $this->choice(
+            'Which writing system you want to use?',
+            ['Latin', 'Cyrillic'],
+            0
+        );
     }
 
     /**
@@ -80,11 +111,30 @@ class InstallLaravelSerbianTranslation extends Command
      *
      * @return void
      */
-    private function publishTranslationFiles($forcePublish = false)
+    private function publishTranslationFilesLatin($forcePublish = false)
     {
         $params = [
             '--provider' => "VojislavD\LaravelSerbianTranslation\LaravelSerbianTranslationServiceProvider",
-            '--tag' => "localization-serbian"
+            '--tag' => "localization-serbian-latin"
+        ];
+
+        if ($forcePublish === true) {
+            $params['--force'] = true;
+        }
+
+        $this->call('vendor:publish', $params);
+    }
+
+    /**
+     * Publish localization files.
+     *
+     * @return void
+     */
+    private function publishTranslationFilesCyrillic($forcePublish = false)
+    {
+        $params = [
+            '--provider' => "VojislavD\LaravelSerbianTranslation\LaravelSerbianTranslationServiceProvider",
+            '--tag' => "localization-serbian-cyrillic"
         ];
 
         if ($forcePublish === true) {
