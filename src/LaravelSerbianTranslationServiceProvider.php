@@ -20,8 +20,8 @@ class LaravelSerbianTranslationServiceProvider extends ServiceProvider
             ]);
 
             $this->publishes([
-                __DIR__.'/../resources/lang/sr.json' => resource_path('lang/sr.json'),
-                __DIR__.'/../resources/lang/sr' => resource_path('lang/sr')
+                __DIR__.'/../resources/lang/sr_latin.json' => resource_path('lang/sr.json'),
+                __DIR__.'/../resources/lang/sr_latin' => resource_path('lang/sr')
             ], 'localization-serbian');
         }
     }

@@ -123,23 +123,23 @@ class InstallLaravelSerbianTranslationTest extends TestCase
 
         // Assert that the original content is overwritten
         $this->assertEquals(
-            file_get_contents(__DIR__.'/../../resources/lang/sr.json'),
+            file_get_contents(__DIR__.'/../../resources/lang/sr_latin.json'),
             file_get_contents(resource_path('lang/sr.json'))
         );
         $this->assertEquals(
-            file_get_contents(__DIR__.'/../../resources/lang/sr/auth.php'),
+            file_get_contents(__DIR__.'/../../resources/lang/sr_latin/auth.php'),
             file_get_contents(resource_path('lang/sr/auth.php'))
         );
         $this->assertEquals(
-            file_get_contents(__DIR__.'/../../resources/lang/sr/pagination.php'),
+            file_get_contents(__DIR__.'/../../resources/lang/sr_latin/pagination.php'),
             file_get_contents(resource_path('lang/sr/pagination.php'))
         );
         $this->assertEquals(
-            file_get_contents(__DIR__.'/../../resources/lang/sr/passwords.php'),
+            file_get_contents(__DIR__.'/../../resources/lang/sr_latin/passwords.php'),
             file_get_contents(resource_path('lang/sr/passwords.php'))
         );
         $this->assertEquals(
-            file_get_contents(__DIR__.'/../../resources/lang/sr/validation.php'),
+            file_get_contents(__DIR__.'/../../resources/lang/sr_latin/validation.php'),
             file_get_contents(resource_path('lang/sr/validation.php'))
         );
 
