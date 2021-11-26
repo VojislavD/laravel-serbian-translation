@@ -43,6 +43,7 @@ class InstallLaravelSerbianTranslation extends Command
             $this->info('Localization files published.');
         } else {
             if ($this->shouldOverwriteTranslationFiles()) {
+                $this->info('Overwritting localization files...');
                 $this->publishTranslationFiles(true);
                 $this->info('Localization files published.');
             } else {
