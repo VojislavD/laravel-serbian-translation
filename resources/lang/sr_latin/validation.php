@@ -57,7 +57,7 @@ return [
     'gte' => [
         'numeric' => 'Polje :attribute mora da bude veće ili jednako od :value.',
         'file' => 'Polje :attribute mora da bude veće ili jednako od :value kilobajta.',
-        'string' => 'Polje :attribute mora da sadrži više ili tačno :value karaktera.',
+        'string' => 'Polje :attribute mora da sadrži tačno ili više od :value karaktera.',
         'array' => 'Polje :attribute mora da sadrži :value ili više elemenata.',
     ],
     'image' => 'Polje :attribute mora da bude slika.',
@@ -77,8 +77,8 @@ return [
     'lte' => [
         'numeric' => 'Polje :attribute mora da bude manje ili jednako od :value.',
         'file' => 'Polje :attribute mora da bude manje ili jednako od :value kilobajta.',
-        'string' => 'Polje :attribute mora da sadrži manje ili tačno :value karaktera.',
-        'array' => 'Polje :attribute mora da sadrži manje ili tačno :value elementa.',
+        'string' => 'Polje :attribute mora da sadrži tačno ili manje od :value karaktera.',
+        'array' => 'Polje :attribute mora da sadrži tačno ili manje od :value elementa.',
     ],
     'max' => [
         'numeric' => 'Polje :attribute mora da bude manje od :max.',
