@@ -1,8 +1,9 @@
 # Laravel translation to Serbian language
 
 ---
-This Laravel package translates default Laravel's localization files to Serbian language
----
+
+This Laravel package translates default Laravel's localization files and <a href="https://github.com/laravel/jetstream">Jetstream</a> package to Serbian language.
+
 Once package is installed, run install command and choose writing system between Latin and Cyrillic.
 
 ## Installation
