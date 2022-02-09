@@ -90,7 +90,7 @@ class InstallLaravelSerbianTranslation extends Command
      */
     private function translationFilesExists()
     {
-        return (File::exists(resource_path('lang/sr')) || File::exists(resource_path('lang/sr.json')));
+        return (File::exists(lang_path('sr')) || File::exists(lang_path('sr.json')));
     }
 
     /**

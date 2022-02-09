@@ -45,6 +45,7 @@ return [
     'distinct' => 'Polje :attribute sadrži dupliranu vrednost.',
     'email' => 'Polje :attribute mora da bude ispravna e-mejl adresa.',
     'ends_with' => 'Polje :attribute mora da se završi sa jednom od sledećih vrednosti: :values.',
+    'enum' => 'Izabrano polje :attribute je neispravno.',
     'exists' => 'Izabrano polje :attribute je neispravno.',
     'file' => 'Polje :attribute mora da bude fajl.',
     'filled' => 'Polje :attribute mora da sadrži vrednost.',
@@ -80,6 +81,7 @@ return [
         'string' => 'Polje :attribute mora da sadrži tačno ili manje od :value karaktera.',
         'array' => 'Polje :attribute mora da sadrži tačno ili manje od :value elementa.',
     ],
+    'mac_address' => 'Polje :attribute mora da bude ispravna MAC adresa.',
     'max' => [
         'numeric' => 'Polje :attribute mora da bude manje od :max.',
         'file' => 'Polje :attribute mora da bude manje od :max kilobajta.',
@@ -106,6 +108,7 @@ return [
     'prohibits' => 'Polje :attribute zabranjuje polju :other da bude prisutno.',
     'regex' => 'Format polja :attribute je neispravan.',
     'required' => 'Polje :attribute je obavezno.',
+    'required_array_keys' => 'Polje :attribute mora da sadrži unose za: :values.',
     'required_if' => 'Polje :attribute je obavezno kada je vrednost polja :other :value.',
     'required_unless' => 'Polje :attribute je obavezno osim ako je vrednost polja :other :values.',
     'required_with' => 'Polje :attribute je obavezno kada je polje :values prisutno.',

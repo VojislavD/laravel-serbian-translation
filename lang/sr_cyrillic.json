@@ -1,4 +1,9 @@
 {
+	"The :attribute must contain at least one letter.": "Поље :attribute мора да садржи бар једно слово.",
+    "The :attribute must contain at least one number.": "Поље :attribute мора да садржи бар један број.",
+    "The :attribute must contain at least one symbol.": "Поље :attribute мора да садржи бар један симбол.",
+    "The :attribute must contain at least one uppercase and one lowercase letter.": "Поље :attribute мора да садржи бар једно велико и једно мало слово.",
+    "The given :attribute has appeared in a data leak. Please choose a different :attribute.": "Поље :attribute се налази у подацима који су изложени ризику. Молимо Вас изаберите другу вредност за поље :attribute.",
 	"A new verification link has been sent to the email address you provided during registration.": "Нови верификациони линк је послат на е-мејл адресу коју сте унели приликом регистрације.",
 	"API Token Permissions": "Дозволе АПИ токена",
 	"API Token": "АПИ токен",
