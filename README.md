@@ -22,7 +22,7 @@ php artisan lst:install
 Package offers two writing systems, Latin and Cyrillic. You can choose one you want during package installation.
 
 #### NOTE
-Package will overwrite `resource/lang/sr.json` file and default files in `resources\lang\sr` directory, if present.
+Package will overwrite `lang/sr.json` file and default files in `lang\sr` directory, if present.
 
 ## Testing
 Run the tests with:
